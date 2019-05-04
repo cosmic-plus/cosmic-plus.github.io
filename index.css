@@ -351,7 +351,6 @@ label {
   max-width: 35em;
   padding: 0.2em;
   overflow: hidden;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease; }
 
 textarea,
@@ -494,9 +493,7 @@ h1 {
   h1 svg {
     height: 1em;
     fill: #666666;
-    -webkit-transform: skewX(-12deg);
-        -ms-transform: skewX(-12deg);
-            transform: skewX(-12deg); }
+    transform: skewX(-12deg); }
 
 main {
   width: 50em;
@@ -522,7 +519,6 @@ footer {
     footer a svg {
       height: 2.5em;
       fill: lightgrey;
-      -webkit-transition: fill 0.2s ease;
       transition: fill 0.2s ease; }
     footer a:hover svg {
       fill: #666666; }
@@ -540,17 +536,16 @@ noscript {
   padding: 0.5rem 2rem;
   overflow: hidden; }
 
-iframe {
-  width: 100%; }
+.urlView {
+  width: 100%;
+  border: none;
+  background: white; }
 
 .ContentSection .background {
   position: absolute;
   opacity: 0.04;
-  -webkit-transform: translate(-40%, -40%);
-      -ms-transform: translate(-40%, -40%);
-          transform: translate(-40%, -40%);
-  -webkit-filter: grayscale(40%);
-          filter: grayscale(40%); }
+  transform: translate(-40%, -40%);
+  filter: grayscale(40%); }
 
 .ContentSection em {
   position: absolute;
@@ -571,7 +566,6 @@ h3 {
 hr {
   border: 0;
   height: 1px;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #e3e3e8, rgba(0, 0, 0, 0));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #e3e3e8, rgba(0, 0, 0, 0)); }
 
 nav {
@@ -593,7 +587,6 @@ a {
   text-decoration: none;
   color: #999999;
   font-stretch: condensed;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease; }
   a:hover, a.selected {
     color: burlywood; }
