@@ -343,13 +343,13 @@ template {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/SourceSansPro-Regular.ttf"); }
+  src: url("./fonts/SourceSansPro-regular.ttf"); }
 
 @font-face {
-  font-family: "Roboto Slab";
+  font-family: "Tenor Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/RobotoSlab-Regular.ttf"); }
+  src: url("./fonts/TenorSans-regular.ttf"); }
 
 /* Layout */
 html {
@@ -361,10 +361,10 @@ html {
 
 body {
   height: 100%;
-  background: linear-gradient(#f6f9fd, #eff4fd);
+  background: #f6f9ff;
   padding: 3rem 0 3em 0;
   font-family: "Source Sans Pro", Arial, sans-serif;
-  color: #111; }
+  color: #292929; }
 
 header {
   position: fixed;
@@ -391,14 +391,15 @@ a {
   text-decoration: none;
   font-stretch: condensed;
   transition: 0.2s all ease;
-  color: #666666; }
+  color: #b7c0d1; }
   a:hover:not(.selected) {
     text-decoration: none;
     cursor: pointer; }
 
 p {
   line-height: 1.4em;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  margin: 1.4rem 0; }
 
 nav {
   float: right;
@@ -410,18 +411,21 @@ nav {
     margin: 0.2rem 0 0 1.6em;
     border-bottom: solid 0.2rem transparent; }
     nav a:hover, nav a.selected {
-      color: #6263C0; }
+      color: #607492; }
     nav a.selected {
-      border-bottom-color: #6263C0; }
+      border-bottom-color: #607492; }
 
 h2 {
-  margin: 1em 0 1.75rem 0;
+  margin: 2rem 0;
   font-size: 1.4em;
   text-align: center;
   font-family: "Roboto Slab";
+  font-family: "Tenor Sans";
   position: relative;
   font-weight: bold;
-  vertical-align: bottom; }
+  color: #001738; }
+  h2:first-child {
+    margin-top: 1.4rem; }
 
 h3 {
   margin: 1.2em;
@@ -436,7 +440,8 @@ hr {
   background-image: linear-gradient(to right, transparent, #e6e6e6, transparent); }
 
 ul {
-  margin: 0; }
+  margin: 1em;
+  padding: 0; }
   ul li {
     list-style-type: none;
     margin: 1em; }
@@ -448,7 +453,7 @@ ul {
 /* Header Style */
 body > header {
   box-shadow: 0.1em 0.1em 0.2em 0.1em #e6e6e6;
-  background: white;
+  background: #001738;
   padding: 0 2%;
   vertical-align: top;
   overflow: hidden;
@@ -462,39 +467,55 @@ body > header {
         display: unset; } }
     body > header nav a {
       margin-top: 0.3rem;
-      line-height: 2.4rem; }
+      line-height: 2.4rem;
+      color: #b7c0d1; }
+      body > header nav a:hover, body > header nav a.selected {
+        color: #ffffff;
+        border-color: #ffffff; }
   body > header select {
     float: right;
-    width: auto;
     height: 3rem;
-    margin: 0;
+    padding: 0 1em;
     font-size: 1.05em;
     border: none !important;
     box-shadow: none !important;
-    background: white;
-    color: gray;
-    text-align-last: right; }
+    background: #001738;
+    -webkit-appearance: none;
+    color: #ffffff;
+    cursor: pointer; }
     @media screen and (min-width: 46em) {
       body > header select {
         display: none; } }
+  body > header:after {
+    content: "▾";
+    color: #ffffff;
+    position: absolute;
+    right: 2%;
+    pointer-events: none; }
+    @media screen and (min-width: 46em) {
+      body > header:after {
+        display: none; } }
   body > header h1 {
     display: inline-block;
-    margin: 0.75rem 0;
-    line-height: 1.5rem;
-    font-size: 1.5em;
-    font-style: italic;
-    color: #666666;
-    font-weight: bolder; }
+    margin: 0;
+    height: 3rem;
+    position: relative;
+    line-height: 2rem; }
     body > header h1 svg {
       display: inline-block;
-      height: 1em;
-      fill: #666666;
-      transform: skewX(-12deg); }
+      fill: #ffffff; }
+      body > header h1 svg.logo {
+        height: 1.86rem;
+        margin: 0.57rem 0; }
+      body > header h1 svg.title {
+        height: 0.93rem;
+        margin: 1.035rem 0;
+        margin-left: 0.5766rem; }
 
 /* Main Style */
 body > noscript,
 body > main {
-  padding: 0.3em 1%;
+  padding: 0.2em 1%;
   overflow: hidden; }
   body > noscript section,
   body > main section {
@@ -503,10 +524,10 @@ body > main {
     margin: 2rem 0;
     border-radius: 0.1em;
     box-shadow: 0.1em 0.1em 0.2em #e6e6e6;
-    background: #fefefe;
+    background: #ffffff;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 1em 7%; }
+    padding: 0.6em 7%; }
     body > noscript section img,
     body > main section img {
       position: absolute;
@@ -514,42 +535,40 @@ body > main {
       top: 50%;
       transform: translate(-50%, -50%);
       pointer-events: none;
-      opacity: 0.05;
+      opacity: 0.04;
       filter: grayscale(40%); }
     body > noscript section aside,
     body > main section aside {
       position: absolute;
       right: 1em;
       font-style: italic; }
-    body > noscript section nav a:last-child,
-    body > main section nav a:last-child {
-      font-weight: bold; }
-    body > noscript section a,
-    body > main section a {
-      color: #4c4d9c; }
-      body > noscript section a:hover, body > noscript section a.selected,
-      body > main section a:hover,
-      body > main section a.selected {
-        text-decoration: underline !important; }
+    body > noscript section nav,
+    body > main section nav {
+      float: right; }
+      body > noscript section nav a:last-child,
+      body > main section nav a:last-child {
+        font-weight: bold; }
 
 /* Footer Style */
 body > footer {
-  border-top: solid 1px #e6e6e6;
-  background: white;
+  background: #001738;
   padding: 0 1%;
   overflow: hidden;
   text-align: center;
   white-space: nowrap; }
   body > footer .Icon {
     display: inline-block;
-    margin: 0.5em 1vw 0 1vw; }
+    margin: 0.6em 1vh; }
+    @media screen and (min-width: 46em) {
+      body > footer .Icon {
+        margin: 0.6em 2vh; } }
     body > footer .Icon svg {
-      height: 2em;
+      height: 1.8em;
       max-width: 9vw;
-      fill: #cccccc;
+      fill: #b7c0d1;
       transition: fill 0.2s ease; }
     body > footer .Icon:hover svg {
-      fill: #6263C0; }
+      fill: #ffffff; }
 
 /* UrlView */
 .urlView {
@@ -595,7 +614,7 @@ body > footer {
   margin: 0 0.5em;
   vertical-align: middle;
   border-radius: 100%;
-  background-color: #666666;
+  background-color: #001738;
   animation: animate 1.0s infinite ease-in-out; }
 
 @keyframes animate {
