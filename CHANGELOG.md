@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased
+## 1.0.1 - 2019-07-31
+
+### Fixed
+
+- Fix donation sideframe. (Thanks [@b1tcc])
+
+## 1.0.0 - 2019-07-27
 
 ### Added
 
@@ -40,3 +46,5 @@ All notable changes to this project will be documented in this file.
 ## 0.1.0 - 2019-02-23
 
 Initial release
+
+[@b1tcc]: https://keybase.io/b1tcc
