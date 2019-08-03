@@ -391,7 +391,7 @@ a {
   text-decoration: none;
   font-stretch: condensed;
   transition: 0.2s all ease;
-  color: #b7c0d1; }
+  color: #607492; }
   a:hover:not(.selected) {
     text-decoration: none;
     cursor: pointer; }
@@ -411,9 +411,9 @@ nav {
     margin: 0.2rem 0 0 1.6em;
     border-bottom: solid 0.2rem transparent; }
     nav a:hover, nav a.selected {
-      color: #607492; }
+      color: #b7c0d1; }
     nav a.selected {
-      border-bottom-color: #607492; }
+      border-bottom-color: #b7c0d1; }
 
 h2 {
   margin: 2rem 0;

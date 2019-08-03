@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.1.0 - 2019-08-03
+
+### Added
+
+- Add well-sized `static/images/summary.png` as og:image.
+
+### Changed
+
+- Update icons to final version.
+- Improve link styling.
+- Edit `about.html`.
+- Improve handling of Github documentation.
+
 ## 1.0.1 - 2019-07-31
 
 ### Fixed
