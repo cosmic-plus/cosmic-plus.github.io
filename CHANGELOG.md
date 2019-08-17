@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.3.0 - 2019-08-17
+
+### Changed
+
+- UI: Open external links in new tab.
+- UI: Scroll `main` rather than `body`.
+
+### Fixed
+
+- UI: Fix Cosmic.link side-frame for first-time viewers.
+- UI: Fix embedded pages on iOS.
+- UI: Fix embedded pages links copying/opening in new tabs.
+
 ## 1.2.0 - 2019-08-03
 
 ### Added
