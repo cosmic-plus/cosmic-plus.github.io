@@ -304,7 +304,7 @@ template {
 [hidden] {
   display: none; }
 
-/* Screen-size handling */
+/* Screen-size Handling */
 @-ms-viewport {
   width: device-width; }
 
@@ -332,6 +332,12 @@ template {
 [hidden] {
   display: none !important; }
 
+html {
+  box-sizing: border-box;
+  vertical-align: middle; }
+  html * {
+    max-height: 100%; }
+
 *, *:before, *:after {
   box-sizing: inherit;
   vertical-align: inherit;
@@ -354,9 +360,7 @@ template {
 /* Layout */
 html {
   position: relative;
-  box-sizing: border-box;
-  min-height: 100vh;
-  vertical-align: middle; }
+  min-height: 100vh; }
 
 body {
   height: 100vh;
