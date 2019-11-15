@@ -378,8 +378,7 @@ header {
 
 main, noscript {
   display: block;
-  overflow-y: auto;
-  max-height: 100%; }
+  overflow-y: auto; }
 
 footer {
   position: absolute;
