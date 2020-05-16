@@ -345,6 +345,9 @@ body > * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+/* Grey */
+/* Primary */
+/* Elevation */
 /* Colors Theme */
 @font-face {
   font-family: "Source Sans Pro";
@@ -361,7 +364,7 @@ html {
 
 body {
   height: 100vh;
-  background: #f6f9ff;
+  background: #f0f8ff;
   padding: 3rem 0 3em 0;
   font-family: "Source Sans Pro", Arial, sans-serif;
   color: #292929; }
@@ -373,7 +376,8 @@ header {
   width: 100%;
   height: 3rem; }
 
-main, noscript {
+main,
+noscript {
   display: block;
   overflow-y: auto; }
 
@@ -387,11 +391,11 @@ footer {
 a {
   text-decoration: none;
   font-stretch: condensed;
-  transition: 0.2s all ease;
-  color: #607492; }
-  a:hover:not(.selected) {
-    text-decoration: none;
-    cursor: pointer; }
+  transition: 0.2s color ease;
+  color: #003f90; }
+  a:hover {
+    cursor: pointer;
+    color: #006ae8; }
 
 p {
   line-height: 1.4em;
@@ -405,18 +409,12 @@ nav {
   text-align: right; }
   nav a {
     display: inline-block;
-    margin: 0.2rem 0 0 1.6em;
-    border-bottom: solid 0.2rem transparent; }
-    nav a:hover, nav a.selected {
-      color: #b7c0d1; }
-    nav a.selected {
-      border-bottom-color: #b7c0d1; }
+    margin: 0.2rem 0 0 1.6em; }
 
 h2 {
   margin: 2rem 0;
   font-size: 1.4em;
   text-align: center;
-  font-family: "Roboto Slab";
   font-family: "Tenor Sans";
   position: relative;
   font-weight: bold;
@@ -429,12 +427,6 @@ h3 {
   font-size: 1.05em;
   font-weight: bold;
   text-align: center; }
-
-hr {
-  border: 0;
-  height: 1px;
-  margin: 1em;
-  background-image: linear-gradient(to right, transparent, #e6e6e6, transparent); }
 
 ul {
   margin: 1em;
@@ -449,7 +441,7 @@ ul {
 
 /* Header Style */
 body > header {
-  box-shadow: 0.1em 0.1em 0.2em 0.1em #e6e6e6;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14), 0 4px 5px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.2);
   background: #001738;
   padding: 0 2%;
   vertical-align: top;
@@ -465,10 +457,12 @@ body > header {
     body > header nav a {
       margin-top: 0.3rem;
       line-height: 2.4rem;
-      color: #b7c0d1; }
+      color: #98cdff;
+      border-bottom: solid 0.2rem transparent; }
       body > header nav a:hover, body > header nav a.selected {
-        color: #ffffff;
-        border-color: #ffffff; }
+        color: #f0f8ff; }
+      body > header nav a.selected {
+        border-bottom-color: #f0f8ff; }
   body > header select {
     float: right;
     height: 3rem;
@@ -515,12 +509,12 @@ body > main {
   padding: 0.2em 1%; }
   body > noscript section,
   body > main section {
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     position: relative;
     width: 50em;
     max-width: 94%;
     margin: 2rem auto;
     border-radius: 0.1em;
-    box-shadow: 0.1em 0.1em 0.2em #e6e6e6;
     background: #ffffff;
     overflow-x: auto;
     overflow-y: hidden;
@@ -532,22 +526,20 @@ body > main {
       top: 50%;
       transform: translate(-50%, -50%);
       pointer-events: none;
-      opacity: 0.04;
+      opacity: 0.08;
       filter: grayscale(40%); }
     body > noscript section aside,
     body > main section aside {
       position: absolute;
       right: 1em;
       font-style: italic; }
-    body > noscript section nav,
-    body > main section nav {
-      float: right; }
-      body > noscript section nav a:last-child,
-      body > main section nav a:last-child {
-        font-weight: bold; }
+    body > noscript section nav a:last-child,
+    body > main section nav a:last-child {
+      font-weight: bold; }
 
 /* Footer Style */
 body > footer {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14), 0 4px 5px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.2);
   background: #001738;
   padding: 0 1%;
   overflow: hidden;
@@ -562,10 +554,10 @@ body > footer {
     body > footer .Icon svg {
       height: 1.8em;
       max-width: 9vw;
-      fill: #b7c0d1;
+      fill: #98cdff;
       transition: fill 0.2s ease; }
     body > footer .Icon:hover svg {
-      fill: #ffffff; }
+      fill: #f0f8ff; }
 
 /* UrlView */
 .urlView {
@@ -574,34 +566,6 @@ body > footer {
   border: none;
   background: white;
   height: calc(100vh - 3rem - 3em); }
-
-/*!
- * Partly taken from animate.css -http://daneden.me/animate
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- * Copyright (c) 2018 Daniel Eden
- */
-@media (print), (prefers-reduced-motion) {
-  .animated {
-    animation: unset !important;
-    transition: none !important; } }
-
-.animated {
-  animation-duration: 0.4s;
-  animation-fill-mode: both; }
-
-@keyframes slideInRight {
-  from {
-    transform: translate3d(100%, 0, 0);
-    visibility: visible; }
-  to {
-    transform: translate3d(0, 0, 0); } }
-
-@keyframes slideOutRight {
-  from {
-    transform: translate3d(0, 0, 0); }
-  to {
-    transform: translate3d(100%, 0, 0);
-    visibility: hidden; } }
 
 /* Spinner */
 .cosmiclib_loadingAnim,
@@ -614,7 +578,7 @@ body > footer {
   vertical-align: middle;
   border-radius: 100%;
   background-color: #001738;
-  animation: animate 1.0s infinite ease-in-out; }
+  animation: animate 1s infinite ease-in-out; }
 
 @keyframes animate {
   0% {
