@@ -345,7 +345,8 @@ body > * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-/* Grey */
+/* Helpers */
+/* Greys */
 /* Primary */
 /* Elevation */
 /* Colors Theme */
@@ -364,7 +365,7 @@ html {
 
 body {
   height: 100vh;
-  background: #f0f8ff;
+  background: aliceblue;
   padding: 3rem 0 3em 0;
   font-family: "Source Sans Pro", Arial, sans-serif;
   color: #292929; }
@@ -441,6 +442,7 @@ ul {
 
 /* Header Style */
 body > header {
+  z-index: 400;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14), 0 4px 5px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.2);
   background: #001738;
   padding: 0 2%;
@@ -460,9 +462,9 @@ body > header {
       color: #98cdff;
       border-bottom: solid 0.2rem transparent; }
       body > header nav a:hover, body > header nav a.selected {
-        color: #f0f8ff; }
+        color: aliceblue; }
       body > header nav a.selected {
-        border-bottom-color: #f0f8ff; }
+        border-bottom-color: aliceblue; }
   body > header select {
     float: right;
     height: 3rem;
@@ -509,6 +511,7 @@ body > main {
   padding: 0.2em 1%; }
   body > noscript section,
   body > main section {
+    z-index: 100;
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     position: relative;
     width: 50em;
@@ -539,6 +542,7 @@ body > main {
 
 /* Footer Style */
 body > footer {
+  z-index: 400;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14), 0 4px 5px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.2);
   background: #001738;
   padding: 0 1%;
@@ -557,7 +561,7 @@ body > footer {
       fill: #98cdff;
       transition: fill 0.2s ease; }
     body > footer .Icon:hover svg {
-      fill: #f0f8ff; }
+      fill: aliceblue; }
 
 /* UrlView */
 .urlView {
