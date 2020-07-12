@@ -308,23 +308,22 @@ template {
 @-ms-viewport {
   width: device-width; }
 
-@media screen and (min-width: 46em), screen and (min-height: 36.5em) {
-  html {
-    font-size: 1.1em; } }
+html {
+  font-size: 1.1em; }
 
-@media screen and (min-width: 62em), screen and (min-height: 48em) {
+@media screen and (min-width: 64em), screen and (min-height: 64em) {
   html {
     font-size: 1.2em; } }
 
-@media screen and (min-width: 83em), screen and (min-height: 64em) {
+@media screen and (min-width: 85.375em), screen and (min-height: 85.375em) {
   html {
     font-size: 1.3em; } }
 
-@media (min-width: 118em), screen and (min-height: 85em) {
+@media screen and (min-width: 120em) {
   html {
     font-size: 1.5em; } }
 
-@media (min-width: 158em) {
+@media screen and (min-width: 160em) {
   html {
     font-size: 1.8em; } }
 
@@ -459,12 +458,12 @@ body > header {
     body > header nav a {
       margin-top: 0.3rem;
       line-height: 2.4rem;
-      color: #98cdff;
+      color: aliceblue;
       border-bottom: solid 0.2rem transparent; }
       body > header nav a:hover, body > header nav a.selected {
-        color: aliceblue; }
+        color: #98cdff; }
       body > header nav a.selected {
-        border-bottom-color: aliceblue; }
+        border-bottom-color: #98cdff; }
   body > header select {
     float: right;
     height: 3rem;
@@ -474,14 +473,14 @@ body > header {
     box-shadow: none !important;
     background: #001738;
     -webkit-appearance: none;
-    color: #ffffff;
+    color: aliceblue;
     cursor: pointer; }
     @media screen and (min-width: 46em) {
       body > header select {
         display: none; } }
   body > header:after {
     content: "▾";
-    color: #ffffff;
+    color: aliceblue;
     position: absolute;
     right: 2%;
     pointer-events: none; }
@@ -525,12 +524,16 @@ body > main {
     body > noscript section img,
     body > main section img {
       position: absolute;
+      width: 16em;
+      height: 16em;
       left: 0;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-30%, -30%);
       pointer-events: none;
-      opacity: 0.08;
-      filter: grayscale(40%); }
+      opacity: 0.06;
+      transition: transform 0.6s ease; }
+    body > noscript section:hover img,
+    body > main section:hover img {
+      transform: translate(-60%, -60%); }
     body > noscript section aside,
     body > main section aside {
       position: absolute;
